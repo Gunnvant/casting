@@ -65,7 +65,7 @@ There are three users who have been mapped to three roles:
    - Role: Executive Producer
 ## Hosting instructions
 
-The app is hosted on heroku at {url}--> todo
+The app is hosted on heroku at https://gun-casting.herokuapp.com/api/status
 This app can also be hosted on any linux box. Make sure a postgres server is running and a database for the use by this app is available.
 
 Follow steps 1 to 5 given in **Running Locally** section. To run the actual server use gunicorn
