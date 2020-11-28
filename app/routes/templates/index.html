@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body id = "token" onload="message()" style="word-wrap: break-word">
+        <script>
+            function message(){
+                let url = window.location;
+                const access_token= new URLSearchParams(window.location.hash.substr(1));
+                console.log(access_token.toString());
+                document.getElementById("token").innerHTML=access_token.toString();
+            }
+        </script>
+    </body>
+</html>
