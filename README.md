@@ -63,6 +63,10 @@ There are three users who have been mapped to three roles:
    - Password: producer@123
    - Permissions: get:movies, get:actors, delete:movies, delete:actors, post:movies, post:actors, patch: movies, patch:actors
    - Role: Executive Producer
+
+## Note
+**Use tokens stored in config.py to test the api locally**
+
 ## Hosting instructions
 
 The app is hosted on heroku at https://gun-casting.herokuapp.com/api/status
@@ -101,7 +105,9 @@ gunicorn --bind 0.0.0.0:5000 server:app
 
 **GET/auth**
 
-Login to the app, this takes you to the login page, using user credentials for User1 or User2 or User3 given above one can obtain tokens
+Login to the app, this takes you to the login page, using user credentials for User1 or User2 or User3 given above one can obtain tokens.
+
+**Note**: In case tokens in config.py expire, please use this endpoint to obtain fresh tokens
 
 **GET/status**
 
