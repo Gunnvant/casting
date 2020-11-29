@@ -10,7 +10,7 @@ AUTH0_DOMAIN = os.environ["AUTH0_DOMAIN"]
 ALGORITHMS = [os.environ["ALGORITHMS"]]
 API_AUDIENCE = os.environ["API_AUDIENCE"]
 
-## AuthError Exception
+# AuthError Exception
 """
 AuthError Exception
 A standardized way to communicate auth failure modes
@@ -23,7 +23,7 @@ class AuthError(Exception):
         self.status_code = status_code
 
 
-## Auth Header
+# Auth Header
 
 
 def get_token_auth_header():
@@ -43,7 +43,8 @@ def get_token_auth_header():
         raise AuthError(
             {
                 "code": "invalid_header",
-                "description": 'Authorization header must start with "Bearer".',
+                "description": '''Authorization header
+                                  must start with "Bearer".''',
                 "success": False,
             },
             401,
@@ -146,7 +147,8 @@ def verify_decode_jwt(token):
             raise AuthError(
                 {
                     "code": "invalid_claims",
-                    "description": "Incorrect claims. Please, check the audience and issuer.",
+                    "description": '''Incorrect claims. Please,
+                                       check the audience and issuer.''',
                     "success": False,
                 },
                 401,
