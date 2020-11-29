@@ -24,17 +24,26 @@ def create_app():
 
     @app.errorhandler(404)
     def not_found(error):
-        message = {"success": False, "error": 404, "message": "resource not found"}
+        message = {
+            "success": False,
+            "error": 404,
+            "message": "resource not found"}
         return jsonify(message), 404
 
     @app.errorhandler(422)
     def unprocessable(error):
-        message = {"success": False, "error": 422, "message": "unprocessable entity"}
+        message = {
+            "success": False,
+            "error": 422,
+            "message": "unprocessable entity"}
         return jsonify(message), 422
 
     @app.errorhandler(405)
     def not_allowed(error):
-        message = {"success": False, "error": 405, "message": "method not allowed"}
+        message = {
+            "success": False,
+            "error": 405,
+            "message": "method not allowed"}
         return jsonify(message), 405
 
     @app.errorhandler(400)
