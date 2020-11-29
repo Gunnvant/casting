@@ -6,7 +6,9 @@ from ..auth.auth import requires_auth, AUTH0_DOMAIN, ALGORITHMS, API_AUDIENCE
 
 CLIENT_ID = os.environ["CLIENT_ID"]
 CALLBACK_URL = os.environ["CALLBACK_URL"]
-routes_blueprint = Blueprint("routes_blueprint", __name__, template_folder="templates")
+routes_blueprint = Blueprint("routes_blueprint",
+                             __name__,
+                             template_folder="templates")
 
 
 @routes_blueprint.route("/status", methods=["GET"])
@@ -17,7 +19,11 @@ def status():
 
 @routes_blueprint.route("/auth", methods=["GET"])
 def auth_url():
-    url = f"https://{AUTH0_DOMAIN}/authorize?audience={API_AUDIENCE}&response_type=token&client_id={CLIENT_ID}&redirect_uri={CALLBACK_URL}"
+    url = f'''https://{AUTH0_DOMAIN}/
+            authorize?audience={API_AUDIENCE}
+            &response_type=token
+            &client_id={CLIENT_ID}
+            &redirect_uri={CALLBACK_URL}'''
     return redirect(url)
 
 
