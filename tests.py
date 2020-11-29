@@ -36,9 +36,10 @@ class CastingTestCase(unittest.TestCase):
         """Executed after reach test"""
         pass
 
-    #############################################################################################################
-    # Tests for checking the endpoints with Executive producer role, this role can access all the endpoints     #
-    # ###########################################################################################################
+    """    
+    Tests for checking the endpoints with Executive
+    roducer role, this role can access all the endpoints
+    """
 
     def test_get_actors(self):
         """This tests the GET/actors endpoint"""
