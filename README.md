@@ -1,6 +1,6 @@
 # Casting Agency web service
 
-## Introduction
+## Motivation
 
 This is a basic crud app that allows a media company to manage ```actors``` and ```movies``` resources. This app uses:
 - flask for backend service
